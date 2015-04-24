@@ -1,0 +1,193 @@
+<keymap version="1" name="Yaro" parent="$default">
+  <action id="$Delete">
+    <keyboard-shortcut first-keystroke="DELETE" />
+    <keyboard-shortcut first-keystroke="alt F" />
+  </action>
+  <action id="Back">
+    <keyboard-shortcut first-keystroke="control alt LEFT" />
+    <mouse-shortcut keystroke="button4" />
+    <keyboard-shortcut first-keystroke="alt LEFT" />
+    <keyboard-shortcut first-keystroke="alt M" />
+  </action>
+  <action id="ChangesView.Diff">
+    <keyboard-shortcut first-keystroke="control alt D" />
+  </action>
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="control F4" />
+    <keyboard-shortcut first-keystroke="control W" />
+  </action>
+  <action id="CodeInspection.OnEditor" />
+  <action id="Compare.SameVersion">
+    <keyboard-shortcut first-keystroke="F9" second-keystroke="V" />
+  </action>
+  <action id="CompareDirs" />
+  <action id="CompareTwoFiles" />
+  <action id="Console.Jpa.GenerateSql" />
+  <action id="Console.TableResult.SetDefault" />
+  <action id="Editor Delete">
+    <keyboard-shortcut first-keystroke="alt F" />
+  </action>
+  <action id="EditorBackSpace">
+    <keyboard-shortcut first-keystroke="BACK_SPACE" />
+    <keyboard-shortcut first-keystroke="shift BACK_SPACE" />
+    <keyboard-shortcut first-keystroke="alt D" />
+  </action>
+  <action id="EditorChooseLookupItemCompleteStatement" />
+  <action id="EditorCompleteStatement" />
+  <action id="EditorDeleteLine">
+    <keyboard-shortcut first-keystroke="control D" />
+  </action>
+  <action id="EditorDeleteToLineEnd">
+    <keyboard-shortcut first-keystroke="alt G" />
+  </action>
+  <action id="EditorDeleteToLineStart">
+    <keyboard-shortcut first-keystroke="shift alt G" />
+  </action>
+  <action id="EditorDeleteToWordEnd">
+    <keyboard-shortcut first-keystroke="control DELETE" />
+    <keyboard-shortcut first-keystroke="alt R" />
+  </action>
+  <action id="EditorDeleteToWordStart">
+    <keyboard-shortcut first-keystroke="control BACK_SPACE" />
+    <keyboard-shortcut first-keystroke="alt E" />
+  </action>
+  <action id="EditorDown">
+    <keyboard-shortcut first-keystroke="DOWN" />
+    <keyboard-shortcut first-keystroke="alt K" />
+  </action>
+  <action id="EditorDuplicate">
+    <keyboard-shortcut first-keystroke="F9" second-keystroke="D" />
+  </action>
+  <action id="EditorJoinLines">
+    <keyboard-shortcut first-keystroke="shift alt 6" />
+  </action>
+  <action id="EditorLeft">
+    <keyboard-shortcut first-keystroke="LEFT" />
+    <keyboard-shortcut first-keystroke="alt J" />
+  </action>
+  <action id="EditorLeftWithSelection">
+    <keyboard-shortcut first-keystroke="shift LEFT" />
+    <keyboard-shortcut first-keystroke="shift alt J" />
+  </action>
+  <action id="EditorLineEnd">
+    <keyboard-shortcut first-keystroke="END" />
+    <keyboard-shortcut first-keystroke="shift alt H" />
+  </action>
+  <action id="EditorLineStart">
+    <keyboard-shortcut first-keystroke="HOME" />
+    <keyboard-shortcut first-keystroke="alt H" />
+  </action>
+  <action id="EditorNextWord">
+    <keyboard-shortcut first-keystroke="control RIGHT" />
+    <keyboard-shortcut first-keystroke="alt O" />
+  </action>
+  <action id="EditorNextWordWithSelection">
+    <keyboard-shortcut first-keystroke="shift control RIGHT" />
+    <keyboard-shortcut first-keystroke="shift alt O" />
+  </action>
+  <action id="EditorPageDown">
+    <keyboard-shortcut first-keystroke="PAGE_DOWN" />
+    <keyboard-shortcut first-keystroke="shift alt K" />
+  </action>
+  <action id="EditorPageUp">
+    <keyboard-shortcut first-keystroke="PAGE_UP" />
+    <keyboard-shortcut first-keystroke="shift alt I" />
+  </action>
+  <action id="EditorPreviousWord">
+    <keyboard-shortcut first-keystroke="control LEFT" />
+    <keyboard-shortcut first-keystroke="alt U" />
+  </action>
+  <action id="EditorPreviousWordWithSelection">
+    <keyboard-shortcut first-keystroke="shift control LEFT" />
+    <keyboard-shortcut first-keystroke="shift alt U" />
+  </action>
+  <action id="EditorRight">
+    <keyboard-shortcut first-keystroke="RIGHT" />
+    <keyboard-shortcut first-keystroke="alt L" />
+  </action>
+  <action id="EditorRightWithSelection">
+    <keyboard-shortcut first-keystroke="shift RIGHT" />
+    <keyboard-shortcut first-keystroke="shift alt L" />
+  </action>
+  <action id="EditorSelectWord" />
+  <action id="EditorStartNewLineBefore">
+    <keyboard-shortcut first-keystroke="shift control ENTER" />
+  </action>
+  <action id="EditorTextEnd">
+    <keyboard-shortcut first-keystroke="control END" />
+    <keyboard-shortcut first-keystroke="shift alt N" />
+  </action>
+  <action id="EditorTextStart">
+    <keyboard-shortcut first-keystroke="control HOME" />
+    <keyboard-shortcut first-keystroke="alt N" />
+  </action>
+  <action id="EditorToggleShowLineNumbers">
+    <keyboard-shortcut first-keystroke="F9" second-keystroke="N" />
+  </action>
+  <action id="EditorUp">
+    <keyboard-shortcut first-keystroke="UP" />
+    <keyboard-shortcut first-keystroke="alt I" />
+  </action>
+  <action id="ExportToTextFile" />
+  <action id="FileChooser.GotoDesktop" />
+  <action id="FileStructurePopup">
+    <keyboard-shortcut first-keystroke="control O" />
+  </action>
+  <action id="Forward">
+    <keyboard-shortcut first-keystroke="control alt RIGHT" />
+    <mouse-shortcut keystroke="button5" />
+    <keyboard-shortcut first-keystroke="alt RIGHT" />
+    <keyboard-shortcut first-keystroke="alt COMMA" />
+  </action>
+  <action id="GotoDeclaration">
+    <keyboard-shortcut first-keystroke="control B" />
+    <mouse-shortcut keystroke="control button1" />
+    <mouse-shortcut keystroke="button2" />
+    <keyboard-shortcut first-keystroke="alt PERIOD" />
+  </action>
+  <action id="GuiDesigner.Duplicate" />
+  <action id="GuiDesigner.QuickJavadoc">
+    <mouse-shortcut keystroke="alt button2" />
+  </action>
+  <action id="Images.ShowThumbnails" />
+  <action id="IncrementalSearch">
+    <keyboard-shortcut first-keystroke="alt Y" />
+  </action>
+  <action id="JumpToLastChange">
+    <keyboard-shortcut first-keystroke="control Q" />
+  </action>
+  <action id="JumpToNextChange">
+    <keyboard-shortcut first-keystroke="shift alt Q" />
+  </action>
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="shift alt CLOSE_BRACKET" />
+  </action>
+  <action id="OverrideMethods" />
+  <action id="PreviousTab">
+    <keyboard-shortcut first-keystroke="shift alt OPEN_BRACKET" />
+  </action>
+  <action id="QuickJavaDoc">
+    <mouse-shortcut keystroke="alt button2" />
+  </action>
+  <action id="Resume" />
+  <action id="SelectNextOccurrence" />
+  <action id="SendEOF" />
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="shift alt ENTER" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="shift alt DOWN" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="shift alt LEFT" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="shift alt RIGHT" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="shift alt UP" />
+  </action>
+  <action id="UnselectPreviousOccurrence" />
+  <action id="context.load" />
+  <action id="tasks.goto" />
+</keymap>
