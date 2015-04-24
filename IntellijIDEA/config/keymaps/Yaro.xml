@@ -21,7 +21,6 @@
     <keyboard-shortcut first-keystroke="F9" second-keystroke="V" />
   </action>
   <action id="CompareDirs" />
-  <action id="CompareTwoFiles" />
   <action id="Console.Jpa.GenerateSql" />
   <action id="Console.TableResult.SetDefault" />
   <action id="Editor Delete">
