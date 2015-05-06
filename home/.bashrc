@@ -1,6 +1,11 @@
 # always list in long format
 #alias la='ls -la --color'
 
+#alias wrk="cd /common/workspace"
+#alias classes="cd /common/classes"
+#alias notes="cd /common/Google Drive/emacs/notes/"
+#alias common="cd /common"
+
 wrk() { cd /C/Dev; }
 main() { cd /C/Dev/xbm; }
 # alias git-all='wrk; find . -type d -maxdepth 1 -exec git --git-dir={}/.git pull origin master \;'
