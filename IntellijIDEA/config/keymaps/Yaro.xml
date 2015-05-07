@@ -57,9 +57,7 @@
   <action id="EditorDuplicate">
     <keyboard-shortcut first-keystroke="F9" second-keystroke="D" />
   </action>
-  <action id="EditorJoinLines">
-    <keyboard-shortcut first-keystroke="shift alt 6" />
-  </action>
+  <action id="EditorJoinLines" />
   <action id="EditorLeft">
     <keyboard-shortcut first-keystroke="LEFT" />
     <keyboard-shortcut first-keystroke="alt J" />
@@ -157,6 +155,9 @@
   </action>
   <action id="JumpToNextChange">
     <keyboard-shortcut first-keystroke="shift alt Q" />
+  </action>
+  <action id="Macro.JoinNextLine">
+    <keyboard-shortcut first-keystroke="shift alt 6" />
   </action>
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="shift alt CLOSE_BRACKET" />

@@ -1,16 +1,32 @@
 # always list in long format
-#alias la='ls -la --color'
+alias la='ls -la --color'
+alias ls='ls -la --color'
 
+echo "user: --$USERNAME--"
+
+if [ ${USERNAME} == 'Lyakhy' ]
+then
+#	wrkdir=/C/Dev/xbm
+	alias wrk="cd /C/Dev/xbm"
+# alias git-all='wrk; find . -type d -maxdepth 1 -exec git --git-dir={}/.git pull origin master \;'
+	alias settings="cd /C/Users/Lyakhy/settings"
+	alias git-all='wrk; find . -type d -maxdepth 1 -exec git --git-dir={}/.git up \;'
+	alias java7='export JAVA_HOME=C:/Java/jdk1.7.0_75'
+else
+#TODO: move these to .profile per machine
+	alias wrk="cd /common/workspace"
+fi
+
+#echo "wrkdir: $wrkdir"
+#alias wrk="cd $wrkdir"
+#alias wrk="cd /C/Dev/xbm"
 #alias wrk="cd /common/workspace"
 #alias classes="cd /common/classes"
 #alias notes="cd /common/Google Drive/emacs/notes/"
 #alias common="cd /common"
 
-wrk() { cd /C/Dev; }
+#wrk() { cd /C/Dev; }
 main() { cd /C/Dev/xbm; }
-# alias git-all='wrk; find . -type d -maxdepth 1 -exec git --git-dir={}/.git pull origin master \;'
-alias git-all='wrk; find . -type d -maxdepth 1 -exec git --git-dir={}/.git up \;'
-alias java7='export JAVA_HOME=C:/Java/jdk1.7.0_75'
  
 # set dynamic prompt and window/tab title
 PS1='\[\e]0;${PWD##*/}\a\]\n'  # set window title
