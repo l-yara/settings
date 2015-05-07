@@ -6,3 +6,5 @@
 	recentrepo = C:/Dev/xbm
 [alias]
 	up = "!git remote update -p; git merge --ff-only @{u}"
+[push]
+	default = simple

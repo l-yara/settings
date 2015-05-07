@@ -1,3 +1,5 @@
+
+alias home='cd ~'
 # always list in long format
 alias la='ls -la --color'
 alias ls='ls -la --color'
