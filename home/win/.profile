@@ -14,4 +14,5 @@ PS1="$PS1"'$ '                 # prompt: always $
 
 
 alias wrk="cd /C/Dev/xbm"
- 
+alias java7='export JAVA_HOME=C:/Java/jdk1.7.0_75'
+alias settings="cd /C/Users/Lyakhy/settings" 
