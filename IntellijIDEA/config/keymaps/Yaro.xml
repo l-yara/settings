@@ -74,6 +74,8 @@
     <keyboard-shortcut first-keystroke="HOME" />
     <keyboard-shortcut first-keystroke="alt H" />
   </action>
+  <action id="EditorMoveToPageBottom" />
+  <action id="EditorMoveToPageTop" />
   <action id="EditorNextWord">
     <keyboard-shortcut first-keystroke="control RIGHT" />
     <keyboard-shortcut first-keystroke="alt O" />
@@ -161,10 +163,12 @@
   </action>
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="shift alt CLOSE_BRACKET" />
+    <keyboard-shortcut first-keystroke="control PAGE_DOWN" />
   </action>
   <action id="OverrideMethods" />
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="shift alt OPEN_BRACKET" />
+    <keyboard-shortcut first-keystroke="control PAGE_UP" />
   </action>
   <action id="QuickJavaDoc">
     <mouse-shortcut keystroke="alt button2" />
