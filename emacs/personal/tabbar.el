@@ -11,7 +11,7 @@
   "Return the list of group names the current buffer belongs to.
 This function is a custom function for tabbar-mode's tabbar-buffer-groups.
 This function group all buffers into 3 groups:
-Those Dired, those user buffer, and those emacs buffer.
+Those Dired, those user buffer, and those Emacs buffer.
 Emacs buffer are those starting with “*”."
   (list
    (cond
@@ -39,3 +39,4 @@ Emacs buffer are those starting with “*”."
 (global-set-key (kbd "C-<prior>") 'tabbar-backward)
 
 (provide 'tabbar)
+;;; tabbar.el ends here

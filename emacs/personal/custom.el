@@ -17,6 +17,8 @@
 
 (ergoemacs-mode 1)
 
+;; disable magit warning on each load
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 (provide 'custom)
 ;;; custom.el ends here

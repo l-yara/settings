@@ -1,3 +1,9 @@
+;;; prelude-modules.el -- list of prelude-specific modules to be loaded
+;;;
+;;; Commentary:
+
+;;; Code:
+
 ;;; Uncomment the modules you'd like to use and restart Prelude afterwards
 
 ;; Emacs IRC client
@@ -5,7 +11,7 @@
 ;;(require 'prelude-ido) ;; Super charges Emacs completion for C-x C-f and more
 ;;(require 'prelude-helm) ;; Interface for narrowing and search
 ;; (require 'prelude-company)
-(require 'prelude-key-chord) ;; Binds useful features to key combinations
+;; (require 'prelude-key-chord) ;; Binds useful features to key combinations
 ;; (require 'prelude-mediawiki)
 ;; (require 'prelude-evil)
 
@@ -32,3 +38,6 @@
 ;; (require 'prelude-scss)
 ;; (require 'prelude-web) ;; Emacs mode for web templates
 (require 'prelude-xml)
+
+(provide 'prelude-modules)
+;;; prelude-modules.el ends here
