@@ -173,7 +173,9 @@
   <action id="QuickJavaDoc">
     <mouse-shortcut keystroke="alt button2" />
   </action>
-  <action id="Resume" />
+  <action id="Resume">
+    <keyboard-shortcut first-keystroke="F10" />
+  </action>
   <action id="SelectNextOccurrence" />
   <action id="SendEOF" />
   <action id="SwitchApply">
