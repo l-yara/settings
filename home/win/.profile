@@ -12,7 +12,15 @@ fi
 PS1="$PS1"'\[\033[0m\]\n'      # change color
 PS1="$PS1"'$ '                 # prompt: always $
 
+#grab a git update
+get-git() {
+    echo "Updating $1"
+    git -C $1 remote update -p
+    git -C $1 merge --ff-only @{u}
+}
 
+
+alias git-all="get-git /C/Dev/xbm-framework;get-git /C/Dev/xbm-database;get-git /C/Dev/xbm-readers;get-git /C/Dev/xbm"
 alias wrk="cd /C/Dev/xbm"
 alias wrk8="cd /C/Dev8"
 alias java7='export JAVA_HOME=C:/Java/jdk1.7.0_75'
