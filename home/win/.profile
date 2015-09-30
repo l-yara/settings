@@ -19,10 +19,19 @@ get-git() {
     git -C $1 merge --ff-only @{u}
 }
 
+mvn-it() {
+    echo "building $1"
+    cd $1
+    mvn clean install
+}
 
-alias git-all="get-git /C/Dev/xbm-framework;get-git /C/Dev/xbm-database;get-git /C/Dev/xbm-readers;get-git /C/Dev/xbm"
+H7="/C/Dev"
+H8="/C/Dev8"
+alias git-all7="get-git $H7/xbm-domain;get-git $H7/xbm-framework;get-git $H7/xbm-database;get-git $H7/xbm-readers;get-git $H7/xbm"
+alias mvn-all7="java7;mvn-it $H7/xbm-domain;mvn-it $H7/xbm-framework;mvn-it $H7/xbm-database;mvn-it $H7/xbm-readers;mvn-it $H7/xbm"
+alias tests8="java8;get-git $H8/xbm-test-framework;get-git $H8/jbbm-tests;mvn -f $H8/xbm-test-framework/pom.xml clean install;mvn -f $H8/jbbm-tests/pom.xml clean install -DskipTests;"
 alias wrk="cd /C/Dev/xbm"
-alias wrk8="cd /C/Dev8"
+alias wrk8="cd $H8"
 alias java7='export JAVA_HOME=C:/Java/jdk1.7.0_75'
 alias java8='export JAVA_HOME=C:/Java/jdk1.8.0_40'
 alias settings="cd /C/Users/Lyakhy/settings"
