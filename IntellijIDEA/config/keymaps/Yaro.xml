@@ -12,6 +12,9 @@
   <action id="ChangesView.Diff">
     <keyboard-shortcut first-keystroke="ctrl alt d" />
   </action>
+  <action id="CloseAllEditorsButActive">
+    <keyboard-shortcut first-keystroke="ctrl alt w" />
+  </action>
   <action id="CloseContent">
     <keyboard-shortcut first-keystroke="ctrl f4" />
     <keyboard-shortcut first-keystroke="ctrl w" />
@@ -158,8 +161,11 @@
   <action id="JumpToNextChange">
     <keyboard-shortcut first-keystroke="shift alt q" />
   </action>
-  <action id="Macro.JoinNextLine">
+  <action id="Macro.Join Previous LIne">
     <keyboard-shortcut first-keystroke="shift alt 6" />
+  </action>
+  <action id="Maven.Reimport">
+    <keyboard-shortcut first-keystroke="f9" second-keystroke="a" />
   </action>
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="shift alt close_bracket" />
