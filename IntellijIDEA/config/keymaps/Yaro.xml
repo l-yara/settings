@@ -167,11 +167,17 @@
   <action id="Maven.Reimport">
     <keyboard-shortcut first-keystroke="f9" second-keystroke="a" />
   </action>
+  <action id="Maven.UpdateFolders">
+    <keyboard-shortcut first-keystroke="shift ctrl alt space" />
+  </action>
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="shift alt close_bracket" />
     <keyboard-shortcut first-keystroke="ctrl page_down" />
   </action>
   <action id="OverrideMethods" />
+  <action id="PinToolwindowTab">
+    <keyboard-shortcut first-keystroke="shift ctrl p" />
+  </action>
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="shift alt open_bracket" />
     <keyboard-shortcut first-keystroke="ctrl page_up" />
