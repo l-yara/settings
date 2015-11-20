@@ -12,6 +12,8 @@ fi
 PS1="$PS1"'\[\033[0m\]\n'      # change color
 PS1="$PS1"'$ '                 # prompt: always $
 
+INT_ERR_CODE=0
+
 #grab a git update
 get-git() {
     echo "Updating $1"
@@ -20,19 +22,24 @@ get-git() {
 }
 
 mvn-it() {
-    echo "building $1"
-    cd $1
-    mvn clean install
+    if [ $INT_ERR_CODE -eq 0 ]; then
+        echo "building $1"
+        mvn -f $1 clean install
+        export INT_ERR_CODE="$?"
+    fi
 }
 
 H7="/C/Dev"
 H8="/C/Dev8"
-alias git-all7="get-git $H7/xbm-idd;get-git $H7/xbm-domain;get-git $H7/xbm-framework;get-git $H7/xbm-database;get-git $H7/xbm-readers;get-git $H7/xbm"
-alias mvn-all7="java7;mvn-it $H7/xbm-idd;mvn-it $H7/xbm-domain;mvn-it $H7/xbm-framework;mvn-it $H7/xbm-database;mvn-it $H7/xbm-readers"
+alias git-all7="get-git $H7/xbm-idd"
+alias git-all="get-git $H8/xbm-domain;get-git $H8/xbm-framework;get-git $H8/xbm-database;get-git $H8/xbm-readers;get-git $H8/xbm"
+
+alias mvn-all7="java7;mvn-it $H7/xbm-idd"
+alias mvn-all="java8;mvn-it $H8/xbm-domain;mvn-it $H8/xbm-framework;mvn-it $H8/xbm-database;mvn-it $H8/xbm-readers;mvn-it $H8/xbm"
 alias tests8="java8;get-git $H8/xbm-test-framework;get-git $H8/jbbm-tests;mvn -f $H8/xbm-test-framework/pom.xml clean install;mvn -f $H8/jbbm-tests/pom.xml clean install -DskipTests;"
 alias wrk="cd /C/Dev8/xbm"
 alias wrk8="cd $H8"
 alias java7='export JAVA_HOME=C:/Java/jdk1.7.0_75'
-alias java8='export JAVA_HOME=C:/Java/jdk1.8.0_40'
+alias java8='export JAVA_HOME=C:/Java/jdk1.8.0_40;export INT_ERR_CODE=0'
 alias settings="cd /C/Users/Lyakhy/settings"
 alias zk="cd /C/bin/zookeeper-3.4.6;/C/bin/zookeeper-3.4.6/bin/zkServer.sh start-foreground"
