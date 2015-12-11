@@ -19,6 +19,9 @@
     <keyboard-shortcut first-keystroke="ctrl f4" />
     <keyboard-shortcut first-keystroke="ctrl w" />
   </action>
+  <action id="CodeCompletion">
+    <keyboard-shortcut first-keystroke="ctrl slash" />
+  </action>
   <action id="CodeInspection.OnEditor" />
   <action id="CommentByBlockComment">
     <keyboard-shortcut first-keystroke="shift alt semicolon" />
@@ -132,6 +135,9 @@
   <action id="EditorToggleShowLineNumbers">
     <keyboard-shortcut first-keystroke="f9" second-keystroke="n" />
   </action>
+  <action id="EditorToggleStickySelection">
+    <keyboard-shortcut first-keystroke="ctrl space" />
+  </action>
   <action id="EditorUp">
     <keyboard-shortcut first-keystroke="up" />
     <keyboard-shortcut first-keystroke="alt i" />
@@ -156,6 +162,9 @@
   <action id="GuiDesigner.Duplicate" />
   <action id="GuiDesigner.QuickJavadoc">
     <mouse-shortcut keystroke="alt button2" />
+  </action>
+  <action id="Images.Editor.ActualSize">
+    <keyboard-shortcut first-keystroke="ctrl divide" />
   </action>
   <action id="Images.ShowThumbnails" />
   <action id="IncrementalSearch">
@@ -196,6 +205,10 @@
   </action>
   <action id="SelectNextOccurrence" />
   <action id="SendEOF" />
+  <action id="SmartTypeCompletion">
+    <keyboard-shortcut first-keystroke="shift ctrl space" />
+    <keyboard-shortcut first-keystroke="shift ctrl slash" />
+  </action>
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>
