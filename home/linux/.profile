@@ -24,7 +24,7 @@ fi
 wrk() { cd /common/workspace; }
 #alias wrk='cd /common/workspace'
 alias classes='cd /common/classes'
-alias notes='cd /common/Google Drive/emacs/notes/'
+alias notes='cd /common/Google\ Drive/emacs/notes/'
 alias common='cd /common'
 
 #scripts and binaries
@@ -39,4 +39,3 @@ export M2_HOME=/usr/local/apache-maven/apache-maven-3.2.2/
 export M2=$M2_HOME/bin
 export MAVEN_OPTS="-Xms256m -Xmx512m"
 export PATH=$M2:$PATH
-
