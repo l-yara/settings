@@ -30,8 +30,7 @@ mvn-it() {
 }
 
 H8="/C/Dev8"
-alias git-all="get-git $H8/xbm-idd;get-git $H8/xbm-domain;get-git $H8/xbm-framework;get-git $H8/xbm-database;get-git $H8/xbm-readers;get-git $H8/xbm"
-
+alias git-all="get-git $H8/xbm-idd;get-git $H8/xbm-domain;get-git $H8/xbm-framework;get-git $H8/xbm-database;get-git $H8/xbm-readers;get-git $H8/xbm;get-git $H8/xbm-ordo"
 alias mvn-all="java8;mvn-it $H8/xbm-idd;mvn-it $H8/xbm-domain;mvn-it $H8/xbm-framework;mvn-it $H8/xbm-database;mvn-it $H8/xbm-readers;mvn-it $H8/xbm"
 alias tests8="java8;get-git $H8/xbm-test-framework;get-git $H8/jbbm-tests;mvn -f $H8/xbm-test-framework/pom.xml clean install;mvn -f $H8/jbbm-tests/pom.xml clean install -DskipTests;"
 alias wrk="cd /C/Dev8/xbm"
