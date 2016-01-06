@@ -3,7 +3,7 @@
 	name = Yaroslav Lyakh
 	email = Yaroslav.Lyakh@betfair.com
 [gui]
-	recentrepo = C:/Dev/xbm
+	recentrepo = C:/Dev8
 [alias]
 	up = "!git remote update -p; git merge --ff-only @{u}"
 [push]

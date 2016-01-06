@@ -71,7 +71,6 @@ alias ls='ls -la --color'
 #alias notes="cd /common/Google Drive/emacs/notes/"
 #alias common="cd /common"
 
-#wrk() { cd /C/Dev; }
 main() { cd /C/Dev/xbm; }
 
 
@@ -113,6 +112,7 @@ agent_start() {
 if ! agent_is_running; then
     agent_load_env
 fi
+
 
 # if your keys are not stored in ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub, you'll need
 # to paste the proper path after ssh-add

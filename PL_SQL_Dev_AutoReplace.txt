@@ -1,0 +1,8 @@
+s = SELECT
+f = FROM
+w = WHERE
+o = ORDER BY
+d = DELETE
+sf = SELECT * FROM
+df = DELETE FROM
+SC = SELECT COUNT (*) FROM
