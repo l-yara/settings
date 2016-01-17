@@ -37,9 +37,7 @@
  '(recentf-mode t)
  '(shift-select-mode nil)
  '(size-indication-mode t)
- '(text-mode-hook
-   (quote
-    (turn-off-auto-fill abbrev-mode er/add-text-mode-expansions prelude-enable-whitespace prelude-enable-flyspell text-mode-hook-identify)))
+ '(text-mode-hook (quote (turn-off-auto-fill abbrev-mode er/add-text-mode-expansions prelude-enable-whitespace prelude-enable-flyspell text-mode-hook-identify)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

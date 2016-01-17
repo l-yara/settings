@@ -24,7 +24,7 @@ fi
 wrk() { cd /common/workspace; }
 #alias wrk='cd /common/workspace'
 alias classes='cd /common/classes'
-alias notes='cd /common/Google\ Drive/emacs/notes/'
+alias notes='cd /common/Google\ Drive/notes/'
 alias common='cd /common'
 
 #scripts and binaries
