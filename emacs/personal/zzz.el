@@ -29,6 +29,9 @@ With negative prefix, apply to -N lines above."
 ;; comment whole line: M-7 M-; (select-current-line + comment-swim)
 (global-set-key (kbd "M-;") #'comment-dwim-lines-or-region)
 
+;; start magit (Git utility)
+(global-set-key (kbd "M-9") 'magit-status)
+
 ;; (load-theme 'solarized-dark t)
 ;; (disable-theme 'zenburn)
 
