@@ -92,6 +92,11 @@ With negative prefix, apply to -N lines above."
 ;;I do need the menu!
 (menu-bar-mode 1)
 
+;; Coding system:
+(prefer-coding-system 'utf-8)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
+
 ;; Fixing a bug with C-x and Symbol's value as variable is void: rectangle-mark-mode
 (ad-disable-advice 'kill-region 'before 'smart-cut)
 (ad-activate 'kill-region)
