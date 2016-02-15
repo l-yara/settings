@@ -79,8 +79,8 @@ With negative prefix, apply to -N lines above."
 (define-key isearch-mode-map (kbd "<down>") 'isearch-repeat-forward) ; page down key
 (define-key isearch-mode-map (kbd "<up>") 'isearch-repeat-backward) ; page up key
 
-
-
+;; Auto-refresh dired on file change
+(add-hook 'dired-mode-hook 'auto-revert-mode)
 
 ;;Switch OFF auto-fill
 (setq auto-fill-mode -1)
