@@ -8,15 +8,6 @@
 ;; require package:
 ;; (prelude-require-packages '(some-package some-other-package))
 
-(prelude-require-packages '(ergoemacs-mode))
-(ergoemacs-ignore-prev-global) ; Do not honor previously defined global keys.
-;; (require 'ergoemacs-mode)
-
-(setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
-(setq ergoemacs-keyboard-layout "us") ;; Assumes QWERTY keyboard layout
-
-(ergoemacs-mode 1)
-
 ;; disable magit warning on each load
 (setq magit-last-seen-setup-instructions "1.4.0")
 
@@ -32,7 +23,7 @@
  '(column-number-mode t)
  '(delete-selection-mode t)
  '(global-linum-mode t)
- '(org-CUA-compatible nil)
+ '(cua-mode t nil (cua-base))
  '(org-replace-disputed-keys nil)
  '(recentf-mode t)
  '(shift-select-mode nil)

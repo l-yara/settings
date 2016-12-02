@@ -48,7 +48,7 @@ With negative prefix, apply to -N lines above."
 (defun arrange-center ()
   "Arrange window for shell operation."
   (interactive)
-  (arrange-frame 170 40 5 1))
+  (arrange-frame 130 40 5 1))
 
 (defun arrange-frame (w h x y)
   "Set the (W)idth, (H)eight, and X/Y position of the current frame."
@@ -76,8 +76,8 @@ With negative prefix, apply to -N lines above."
 (require 'goto-last-change)
 (global-set-key  (kbd "C-q") 'goto-last-change)
 
-(define-key isearch-mode-map (kbd "<down>") 'isearch-repeat-forward) ; page down key
-(define-key isearch-mode-map (kbd "<up>") 'isearch-repeat-backward) ; page up key
+(define-key isearch-mode-map (kbd "<down>") 'isearch-repeat-forward)
+(define-key isearch-mode-map (kbd "<up>") 'isearch-repeat-backward)
 
 ;; Auto-refresh dired on file change
 (add-hook 'dired-mode-hook 'auto-revert-mode)
@@ -91,6 +91,17 @@ With negative prefix, apply to -N lines above."
 
 ;;I do need the menu!
 (menu-bar-mode 1)
+
+;; Tab Size and use
+(setq tab-width 4)
+(setq-default tab-width 4)
+;; (smart-tabs-insinuate 'c 'c++ 'clojure 'java 'javascript 'python 'ruby 'nxml)
+
+;; nxml-mode
+(setq
+ nxml-child-indent 4
+ nxml-attribute-indent 4
+ nxml-slash-auto-complete-flag t)
 
 ;; Coding system:
 (prefer-coding-system 'utf-8)
