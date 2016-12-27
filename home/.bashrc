@@ -128,3 +128,6 @@ unset env
 
 # go to the working directory
 wrk
+
+# added by Anaconda2 2.5.0 installer
+export PATH="/home/yara/anaconda2/bin:$PATH"
