@@ -109,8 +109,8 @@ With negative prefix, apply to -N lines above."
 (setq coding-system-for-write 'utf-8)
 
 ;; Fixing a bug with C-x and Symbol's value as variable is void: rectangle-mark-mode
-(ad-disable-advice 'kill-region 'before 'smart-cut)
-(ad-activate 'kill-region)
+;; (ad-disable-advice 'kill-region 'before 'smart-cut)
+;; (ad-activate 'kill-region)
 
 (provide 'zzz)
 ;;; zzz.el ends here

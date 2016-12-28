@@ -7,6 +7,7 @@
 ;;Code
 ;; require package:
 ;; (prelude-require-packages '(some-package some-other-package))
+;; full prelude git: https://github.com/bbatsov/prelude.git
 
 ;; disable magit warning on each load
 (setq magit-last-seen-setup-instructions "1.4.0")
