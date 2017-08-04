@@ -1,10 +1,18 @@
-[gui]
+[core]
+	excludesfile = ~/.gitignore
+	
+	autocrlf = input
+
 [user]
 	name = Yaroslav Lyakh
-	email = Yaroslav.Lyakh@betfair.com
-[gui]
-	recentrepo = C:/Dev8
+	email = l_yara@bigmir.net
 [alias]
 	up = "!git remote update -p; git merge --ff-only @{u}"
+	co = checkout
+	lg = log --oneline --graph --all --decorate 
+	last = log -1 HEAD
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+
 [push]
 	default = simple
