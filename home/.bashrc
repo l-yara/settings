@@ -28,7 +28,7 @@ alias df='df -kTh'
 # The 'ls' family (this assumes you use a recent GNU ls).
 #-------------------------------------------------------------
 # Add colors for filetype and  human-readable sizes by default on 'ls':
-alias ls='ls -h --color'
+#alias ls='ls -h --color'
 alias lx='ls -lXB'         #  Sort by extension.
 alias lk='ls -lSr'         #  Sort by size, biggest last.
 alias lt='ls -ltr'         #  Sort by 3date, most recent last.
@@ -45,8 +45,7 @@ alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
 alias home='cd ~'
 # always list in long format
-alias la='ls -la --color'
-alias ls='ls -la --color'
+alias la='ls -la'
 
 #echo "user: --$USERNAME--"
 
@@ -129,5 +128,3 @@ unset env
 # go to the working directory
 wrk
 
-# added by Anaconda2 2.5.0 installer
-export PATH="/home/yara/anaconda2/bin:$PATH"
