@@ -128,3 +128,7 @@ unset env
 # go to the working directory
 wrk
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/yara/.sdkman"
+[[ -s "/Users/yara/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/yara/.sdkman/bin/sdkman-init.sh"
