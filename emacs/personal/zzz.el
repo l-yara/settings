@@ -8,8 +8,8 @@
 ;; require package:
 ;; (prelude-require-packages '(some-package some-other-package))
 
-(global-set-key (kbd "C-d") 'prelude-kill-whole-line)
-(global-set-key (kbd "<f9>d") 'prelude-duplicate-current-line-or-region)
+(global-set-key (kbd "s-y") 'prelude-kill-whole-line)
+(global-set-key (kbd "C-d") 'prelude-duplicate-current-line-or-region)
 (global-set-key (kbd "<C-tab>") 'hippie-expand) ;auto-complete word
 (global-set-key (kbd "M-/") 'hippie-expand) ;auto-complete word
 
@@ -28,6 +28,7 @@ With negative prefix, apply to -N lines above."
   (back-to-indentation))
 ;; comment whole line: M-7 M-; (select-current-line + comment-swim)
 (global-set-key (kbd "M-;") #'comment-dwim-lines-or-region)
+(global-set-key (kbd "s-/") #'comment-dwim-lines-or-region)
 
 ;; start magit (Git utility)
 (global-set-key (kbd "M-9") 'magit-status)
