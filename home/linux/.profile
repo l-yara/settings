@@ -31,7 +31,7 @@ alias common='cd /common'
 export PATH=~/bin:$PATH
 
 #Java
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_131/
 export PATH=$JAVA_HOME/bin:$PATH
 
 #Maven
@@ -39,3 +39,8 @@ export M2_HOME=/usr/local/apache-maven/apache-maven-3.2.2/
 export M2=$M2_HOME/bin
 export MAVEN_OPTS="-Xms256m -Xmx512m"
 export PATH=$M2:$PATH
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/yara/.sdkman"
+[[ -s "/home/yara/.sdkman/bin/sdkman-init.sh" ]] && source "/home/yara/.sdkman/bin/sdkman-init.sh"
