@@ -1,6 +1,10 @@
-if [ -f "$HOME/.profile" ]; then
-	. "$HOME/.profile"
-fi
+# The underlying idea is that the .bash_profile should be run only once when you login, and the .bashrc for every new interactive shell.
+
+echo starting .bashrc
+
+# if [ -f "$HOME/.profile" ]; then
+#  . "$HOME/.profile"
+# fi
 
 #-------------------
 # Personnal Aliases
@@ -18,7 +22,7 @@ alias ..='cd ..'
 
 # Pretty-print of some PATH variables:
 alias path='echo -e ${PATH//:/\\n}'
-alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
+# alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 
 
 alias du='du -kh'    # Makes a more readable output.
@@ -29,23 +33,25 @@ alias df='df -kTh'
 #-------------------------------------------------------------
 # Add colors for filetype and  human-readable sizes by default on 'ls':
 #alias ls='ls -h --color'
-alias lx='ls -lXB'         #  Sort by extension.
 alias lk='ls -lSr'         #  Sort by size, biggest last.
 alias lt='ls -ltr'         #  Sort by 3date, most recent last.
 alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
 alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
 
 # The ubiquitous 'll': directories first, with alphanumeric sorting:
-alias ll="ls -alv --group-directories-first"
-alias lm='ll |more'        #  Pipe through 'more'
+if [ "$OSTYPE" == linux-gnu ]; then  # Is this the Ubuntu system?
+    alias ll='ls -Flh --group-directories-first'
+else
+    alias ll='gls -Flh --group-directories-first'
+fi
+# alias ll="ls -alv --group-directories-first"
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
 
 alias home='cd ~'
-# always list in long format
-alias la='ls -la'
+# always list in long format alias la='ls -la'
 
 #echo "user: --$USERNAME--"
 
@@ -128,6 +134,7 @@ unset env
 # go to the working directory
 wrk
 
+export PATH="/usr/local/sbin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/yara/.sdkman"
 [[ -s "/Users/yara/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/yara/.sdkman/bin/sdkman-init.sh"
