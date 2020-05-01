@@ -1,4 +1,4 @@
-#to execute in ~/Java/.IdeaIC15/config/
+#to execute in ~/Java/.IdeaIC15/config/ (/Users/yara/Library/Preferences/IdeaIC2019.3)
 export SETTING_GIT_HOME="/common/Google Drive/settings/IntellijIDEA/config"
 #ln -s /common/Google\ Drive/settings/IntellijIDEA/config/codestyles/ codestyles
 
