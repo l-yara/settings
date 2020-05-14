@@ -18,18 +18,10 @@ Emacs buffer are those starting with “*”."
     ((and (> (length (buffer-name)) 7) (string-equal "*eshell" (substring (buffer-name) 0 7)))
      "eshell"
      )
-    ((string-equal "*" (substring (buffer-name) 0 1))
-     "Emacs Buffer"
-     )
-    ((eq major-mode 'dired-mode)
-     "Dired"
-     )
-    ((eq major-mode 'scala-mode)
-     "Scala"
-     )
-    (t
-     "User Buffer"
-     )
+    ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs Buffer")
+    ((eq major-mode 'dired-mode) "Dired")
+    ;; ((eq major-mode 'sunrise) "Sunrise")
+    (t "User Buffer")
     )))
 (setq tabbar-buffer-groups-function 'tabbar-buffer-groups)
 ;;

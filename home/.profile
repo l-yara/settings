@@ -41,7 +41,7 @@ export M2_HOME=/usr/local/apache-maven/apache-maven-3.2.2/
 export M2=$M2_HOME/bin
 export MAVEN_OPTS="-Xms256m -Xmx512m"
 export PATH=$M2:$PATH
-
+alias q='QHOME=~/q rlwrap -r ~/q/m32/q'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/yara/.sdkman"

@@ -1,12 +1,12 @@
 ;;; zzz.el -- is being loaded by prelude after everything else
 ;;;
 ;;; Commentary:
-
+;; M-x load-file reloads this
+;; M-x eval-buffer
 ;;; Code:
-
-;;Code
 ;; require package:
 ;; (prelude-require-packages '(some-package some-other-package))
+
 
 (global-set-key (kbd "s-y") 'prelude-kill-whole-line)
 (global-set-key (kbd "C-d") 'prelude-duplicate-current-line-or-region)
@@ -30,6 +30,9 @@ With negative prefix, apply to -N lines above."
 (global-set-key (kbd "M-;") #'comment-dwim-lines-or-region)
 (global-set-key (kbd "s-/") #'comment-dwim-lines-or-region)
 
+
+;; disable magit warning on each load
+(setq magit-last-seen-setup-instructions "1.4.0")
 ;; start magit (Git utility)
 (global-set-key (kbd "M-9") 'magit-status)
 
@@ -73,9 +76,32 @@ With negative prefix, apply to -N lines above."
 
 ;;go to last edit point
 (prelude-ensure-module-deps '(goto-last-change))
-
 (require 'goto-last-change)
 (global-set-key  (kbd "C-q") 'goto-last-change)
+
+;; Marks: better transient-mark-mode (http://www.masteringemacs.org/articles/2010/12/22/fixing-mark-commands-transient-mark-mode/)
+(defun push-mark-no-activate ()
+  "Pushes `point' to `mark-ring' and does not activate the region
+Equivalent to \\[set-mark-command] when \\[transient-mark-mode] is disabled"
+  (interactive)
+  (push-mark (point) t nil)
+  (message "Pushed mark to ring"))
+(global-set-key (kbd "C-`") 'push-mark-no-activate)
+
+(defun jump-to-mark ()
+  "Jumps to the local mark, respecting the `mark-ring' order.
+This is the same as using \\[set-mark-command] with the prefix argument."
+  (interactive)
+  (set-mark-command 1))
+(global-set-key (kbd "M-`") 'jump-to-mark)
+
+(defun exchange-point-and-mark-no-activate ()
+  "Identical to \\[exchange-point-and-mark] but will not activate the region."
+  (interactive)
+  (exchange-point-and-mark)
+  (deactivate-mark nil))
+;; actually it is C-x C-x
+(define-key global-map [remap exchange-point-and-mark] 'exchange-point-and-mark-no-activate)
 
 (define-key isearch-mode-map (kbd "<down>") 'isearch-repeat-forward)
 (define-key isearch-mode-map (kbd "<up>") 'isearch-repeat-backward)

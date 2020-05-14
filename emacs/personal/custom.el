@@ -9,9 +9,6 @@
 ;; (prelude-require-packages '(some-package some-other-package))
 ;; full prelude git: https://github.com/bbatsov/prelude.git
 
-;; disable magit warning on each load
-(setq magit-last-seen-setup-instructions "1.4.0")
-
 (provide 'custom)
 ;;; custom.el ends here
 
@@ -27,7 +24,9 @@
  '(delete-selection-mode t)
  '(global-linum-mode t)
  '(org-replace-disputed-keys nil)
- '(org-CUA-compatible nil)
+ '(package-selected-packages
+   (quote
+    (goto-last-change tabbar rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major crux browse-kill-ring beacon anzu ace-window)))
  '(recentf-mode t)
  '(shift-select-mode nil)
  '(size-indication-mode t)
