@@ -8,8 +8,8 @@
 ;; (prelude-require-packages '(some-package some-other-package))
 
 
-(global-set-key (kbd "s-y") 'prelude-kill-whole-line)
-(global-set-key (kbd "C-d") 'prelude-duplicate-current-line-or-region)
+(global-set-key (kbd "C-.") 'er/expand-region)
+(global-set-key (kbd "C-,") 'er/contract-region)
 (global-set-key (kbd "<C-tab>") 'hippie-expand) ;auto-complete word
 (global-set-key (kbd "M-/") 'hippie-expand) ;auto-complete word
 
@@ -36,6 +36,15 @@ With negative prefix, apply to -N lines above."
 ;; start magit (Git utility)
 (global-set-key (kbd "M-9") 'magit-status)
 
+(defun mark-whole-line ()
+  "Combinition of C-a, mark, C-e"
+  (interactive)
+  (move-beginning-of-line nil)
+  (set-mark-command nil)
+  (move-end-of-line nil)
+  )
+(global-set-key (kbd "C-;") 'mark-whole-line)
+
 ;; (load-theme 'solarized-dark t)
 ;; (disable-theme 'zenburn)
 
@@ -52,7 +61,7 @@ With negative prefix, apply to -N lines above."
 (defun arrange-center ()
   "Arrange window for shell operation."
   (interactive)
-  (arrange-frame 130 40 5 1))
+  (arrange-frame 160 40 5 1))
 
 (defun arrange-frame (w h x y)
   "Set the (W)idth, (H)eight, and X/Y position of the current frame."
@@ -129,11 +138,6 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  nxml-child-indent 4
  nxml-attribute-indent 4
  nxml-slash-auto-complete-flag t)
-
-;; Coding system:
-(prefer-coding-system 'utf-8)
-(setq coding-system-for-read 'utf-8)
-(setq coding-system-for-write 'utf-8)
 
 ;; Fixing a bug with C-x and Symbol's value as variable is void: rectangle-mark-mode
 ;; (ad-disable-advice 'kill-region 'before 'smart-cut)
