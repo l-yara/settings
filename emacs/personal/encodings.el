@@ -1,15 +1,16 @@
- ; ;; encodings.el -- setting the language (Emacs MULE - MUlti-Language Environment)
- ; ;;
- ; ;; Commentary:
- ; ; copy-paste from https://www.emacswiki.org/emacs/GnuEmacsRussification
- ; ; Устанавливаем языковую среду
+ ;;; encodings.el -- setting the language (Emacs MULE - MUlti-Language Environment)
+ ;;;
+ ;;; Commentary:
+ ;; copy-paste from https://www.emacswiki.org/emacs/GnuEmacsRussification
+ ;; Устанавливаем языковую среду
+;;; Code:
  ; (set-language-environment 'Cyrillic-KOI8)
  ; ; Устанавливаем кодировки по умолчанию для файлов, буферов и обмена с внешними программами
  ; (setq default-buffer-file-coding-system 'koi8-r)
  ; ; Coding system:
- ( prefer-coding-system 'utf-8)
- ( setq coding-system-for-read 'utf-8)
- ( setq coding-system-for-write 'utf-8)
+( prefer-coding-system 'utf-8)
+( setq coding-system-for-read 'utf-8)
+( setq coding-system-for-write 'utf-8)
  ; (define-coding-system-alias 'koi8-u 'koi8-r)
  ; (set-terminal-coding-system 'koi8-r)
  ; (set-keyboard-coding-system 'koi8-r)
@@ -25,7 +26,9 @@
 
  ; (modify-coding-system-alist 'file "\\.txt\\'" 'windows-1252)
  ;(modify-coding-system-alist 'file "\\.org\\'" 'windows-1252)
- ( global-set-key (kbd "s-!") (lambda() (interactive) (activate-input-method nil)))
- ( global-set-key (kbd "s-\"") (lambda() (interactive) (activate-input-method 'russian-computer)))
- ( global-set-key (kbd "s-£") (lambda() (interactive) (activate-input-method 'ukrainian-computer)))
- ( provide 'encodings)
+(global-set-key (kbd "s-!") (lambda() (interactive) (activate-input-method nil)))
+(global-set-key (kbd "s-\"") (lambda() (interactive) (activate-input-method 'russian-computer)))
+(global-set-key (kbd "s-@") (lambda() (interactive) (activate-input-method 'russian-computer)))
+(global-set-key (kbd "s-£") (lambda() (interactive) (activate-input-method 'ukrainian-computer)))
+(provide 'encodings)
+;;; encodings.el ends here
