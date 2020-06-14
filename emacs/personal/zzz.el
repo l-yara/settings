@@ -12,6 +12,7 @@
 (global-set-key (kbd "C-,") 'er/contract-region)
 (global-set-key (kbd "<C-tab>") 'hippie-expand) ;auto-complete word
 (global-set-key (kbd "M-/") 'hippie-expand) ;auto-complete word
+(global-set-key (kbd "<C-f4>") 'kill-current-buffer)
 
 ;; Bastardised version from
 ;; http://endlessparentheses.com/implementing-comment-line.html and
@@ -79,7 +80,7 @@ With negative prefix, apply to -N lines above."
 
 ;; set line wrapping
 (defun enable-visual-line-mode ()
- "Enables visual line mode."
+  "Enables visual line mode."
   (interactive) (unless visual-line-mode (visual-line-mode 1)) (message "Visual-Line mode enabled"))
 (global-set-key (kbd "<f9>w") 'enable-visual-line-mode)
 
