@@ -18,6 +18,13 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+if [ -n "$INSIDE_EMACS" ]; then
+    export PS1='\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+fi
+
+source ~/.profile_alias
+source ~/.enable_ssh
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
