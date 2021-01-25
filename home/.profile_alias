@@ -1,0 +1,47 @@
+#-------------------
+# Personnal Aliases
+#-------------------
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+# -> Prevents accidentally clobbering files.
+alias mkdir='mkdir -p'
+
+alias h='history'
+alias j='jobs -l'
+alias which='type -a'
+alias ..='cd ..'
+
+# Pretty-print of some PATH variables:
+alias path='echo -e ${PATH//:/\\n}'
+# alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
+
+alias du='du -kh'    # Makes a more readable output.
+alias df='df -kTh'
+
+# The ubiquitous 'll': directories first, with alphanumeric sorting:
+if [ "$OSTYPE" == linux-gnu ]; then  # Is this the Ubuntu system?
+    alias ll='ls -Flh --group-directories-first'
+else
+#    alias ll='gls -Flh --group-directories-first'
+    alias ll='ls -Flh --group-directories-first'
+fi
+# alias ll="ls -alv --group-directories-first"
+alias lr='ll -R'           #  Recursive ls.
+alias la='ll -A'           #  Show hidden files.
+alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
+
+alias home='cd ~'
+# always list in long format 
+alias la='ls -la'
+
+alias mvn-skip-tests="mvn clean install -DskipTests=true"
+alias mvn-download-sources="mvn dependency:resolve -Dclassifier=sources"
+alias mvn-clean-subs="for d in */; do mvn clean -f \$d/pom.xml; done"
+
+# start working here
+alias src='cd ~/code/'
+alias downloads='cd $USERPROFILE/Downloads'
+
+alias git-subs="for d in */; do git -C \$d up; done"
+alias git-efrc="for d in ~/code/*/ ; do echo updating \$d; git -C \$d up; done"
