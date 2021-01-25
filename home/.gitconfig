@@ -1,8 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore
-	
 	autocrlf = input
-
 [user]
 	name = Yaroslav Lyakh
 	email = l_yara@bigmir.net
@@ -13,6 +11,7 @@
 	last = log -1 HEAD
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
+	edit-local = config --local --edit
 
 [push]
 	default = simple
