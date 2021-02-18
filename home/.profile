@@ -30,7 +30,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-wrk() { cd /common/workspace; }
+wrk() { cd ~/code; }
 #alias wrk='cd /common/workspace'
 alias classes='cd /common/classes'
 alias notes='cd /common/Google\ Drive/notes/'
