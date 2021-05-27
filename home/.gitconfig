@@ -12,6 +12,8 @@
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
 	edit-local = config --local --edit
+# see  https://stackoverflow.com/questions/25356810/git-how-to-squash-all-commits-on-branch	
+	reset-2-master = "!git reset $(git merge-base master $(git branch --show-current))"
 
 [push]
 	default = simple
